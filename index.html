@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- Linking bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <!-- Font Awesome 5 -->
+    <script src="https://kit.fontawesome.com/e15aefb85c.js" crossorigin="anonymous"></script>
+
+    <!-- Linking vis.js (https://visjs.org/) Network for graph  -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+    <!-- CSS File  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Everything that runs the page -->
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
+
+</head>
+
+<body class="container-fluid pt-2">
+<!--  Nav Bar with random PNG image at top left and text at top right,
+inline block is aligned at top -->
+
+<nav class="navbar navbar-dark bg-dark navbar-inverse rounded-pill">
+    <span class="navbar-brand">
+    Travel Planner
+        <i class="fa-solid fa-location-dot"></i>
+    </span>
+    <img src="https://thumbs.dreamstime.com/b/plan-your-trip-now-round-line-concept-vector-summer-vacation-planning-map-place-pointer-route-beach-icons-palm-90021785.jpg"
+         height="80"
+         class="d-inline-block align-bottom rounded-circle" alt="">
+</nav>
+
+<div id="container">
+
+    <div id="mynetwork">
+    </div>
+
+    <!-- container2 for solution part as well as text where a small intro
+        is present -->
+    <div id="container2" class="border-width-4 border-left border-dark">
+            <span id="leftPaneText" class="h2 text-center" style="width: 100%">
+            </span>
+        <span id="rightPaneText" style="width: 100%" class="lead text-center">
+
+                Orange link represents bus travel time : <i class="fa fa-bus" aria-hidden="true"
+                                                            style="color: orange"></i><br>
+                Green link represents flight travel time : <i class="fa fa-plane" aria-hidden="true"
+                                                              style="color: green"></i><br>
+                Click on Solve to get fastest route.
+            </span>
+        <div id="mynetwork2" style="display: none"></div>
+    </div>
+</div>
+
+<p class="container d-flex">
+    <button type="button" class="btn btn-default btn-primary btn-lg " id="generate-graph">
+
+        <i class="fa-solid fa-arrows-rotate"></i>
+        Get a new Problem
+    </button>
+    <button type="button" class="btn btn-dark btn-default btn-lg " id="solve">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Find Shortest Path
+    </button>
+</p>
+
+<footer class="text-center lead">
+    <span class="small"> made with</span> ❤️ by Utkarsh Sharma
+</footer>
+</body>
+
+</html>
