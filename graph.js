@@ -1,5 +1,5 @@
 /**
- * Simpe graph generator (from an array of tuple[int,int,int]).
+ * Simple graph generator (from an array of tuple[int,int,int]).
  */
 
 
